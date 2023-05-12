@@ -7,9 +7,9 @@ use std::time::{Duration, SystemTime, UNIX_EPOCH};
 use libc::{stat, time_t};
 
 use super::SmbMode;
-use crate::libsmbclient::libsmb_file_info;
 use crate::utils::char_ptr_to_string;
 use crate::{SmbDirentType, SmbError};
+use libsmbclient_sys::libsmb_file_info;
 
 /// DOS Attribute mask for DIRECTORY
 const FILE_ATTRIBUTE_DIRECTORY: u16 = 0x0010;

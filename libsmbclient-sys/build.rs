@@ -1,3 +1,8 @@
+use std::env;
+use std::fs;
+use std::path::{Path, PathBuf};
+use std::process::Command;
+
 fn main() {
     match pkg_config::find_library("smbclient") {
         Ok(_) => {

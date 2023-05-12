@@ -4,9 +4,9 @@
 
 use libc::c_uint;
 
-use crate::libsmbclient::smbc_dirent;
 use crate::utils::char_ptr_to_string;
 use crate::SmbError;
+use libsmbclient_sys::smbc_dirent;
 
 /// Smb directory entity
 #[derive(Debug, Clone)]

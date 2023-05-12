@@ -6,11 +6,11 @@ use std::io::{self, Read, Seek, SeekFrom, Write};
 
 use libc::{c_int, c_void, mode_t, off_t};
 
-use crate::libsmbclient::{
+use crate::{utils, SmbClient};
+use libsmbclient_sys::{
     smbc_getFunctionClose, smbc_getFunctionLseek, smbc_getFunctionRead, smbc_getFunctionWrite,
     SMBCFILE,
 };
-use crate::{utils, SmbClient};
 
 pub struct SmbFile<'a> {
     smbc: &'a SmbClient,

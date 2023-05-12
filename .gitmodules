@@ -1,0 +1,3 @@
+[submodule "libsmbclient-sys/samba"]
+	path = libsmbclient-sys/samba
+	url = https://github.com/samba-team/samba.git

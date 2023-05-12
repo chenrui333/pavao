@@ -2,6 +2,8 @@
 #![allow(clippy::upper_case_acronyms)]
 use std::{clone, default, mem, option};
 
+extern crate libc;
+
 use libc::{
     c_char, c_int, c_uint, c_ulong, c_ushort, c_void, mode_t, off_t, size_t, ssize_t, stat, time_t,
     timespec, timeval,

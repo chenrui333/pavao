@@ -12,8 +12,8 @@ use super::{
     AuthService, SmbCredentials, SmbDirentInfo, SmbFile, SmbMode, SmbOpenOptions, SmbOptions,
     SmbStat,
 };
-use crate::libsmbclient::{SMBCCTX as SmbContext, *};
 use crate::{utils, SmbDirent, SmbError, SmbResult};
+use libsmbclient_sys::{SMBCCTX as SmbContext, *};
 
 lazy_static! {
     static ref AUTH_SERVICE: Mutex<AuthService> = Mutex::new(AuthService::default());

@@ -1,0 +1,30 @@
+[package]
+name = "libsmbclient-sys"
+version = "0.2.1"
+authors = ["Christian Visintin <christian.visintin@veeso.dev>"]
+license = "GPL-3.0+"
+description = "Native bindings to the libsmbclient library."
+documentation = "https://docs.rs/pavao"
+homepage = "https://github.com/veeso/pavao"
+include = ["src/**/*", "build.rs", "LICENSE", "README.md", "CHANGELOG.md"]
+keywords = ["smb", "samba", "network-protocol", "smb2", "smb3"]
+readme = "README.md"
+repository = "https://github.com/veeso/pavao"
+
+# C build
+build = "build.rs"
+links = "smbclient"
+
+[lib]
+name = "libsmbclient_sys"
+path = "lib.rs"
+
+[features]
+vendored-libsmbclient = []
+
+[dependencies]
+libc = "0.2"
+
+[build-dependencies]
+pkg-config = "0.3.11"
+cc = "1.0.25"
